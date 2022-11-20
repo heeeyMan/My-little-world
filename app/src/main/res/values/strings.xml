@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My little world</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Menu navigation -->
+    <string name="home">Home</string>
+    <string name="list_of_anime">Anime</string>
+    <string name="games">Games</string>
+    <string name="other">Other</string>
+
+    <!-- Auth screen -->
+    <string name="presentation_app_name">My little \nworld!</string>
+    <string name="go">Go!</string>
+    <string name="enter_something">Please, enter something … or not … \njust press enter button ;) </string>
+    <string name="help_text">Don\'t understand what to do?</string>
+
+    <!-- Auth screen description -->
+    <string name="sun_description">The sun is depicted here, just image</string>
+    <string name="cloud_description">The cloud is depicted here, just image</string>
+    <string name="bear_description">The bear is depicted here, just image</string>
+    <string name="thinking_person_description">The thinking person is depicted here \n you need to click on it to see the hint</string>
+    <string name="bear_mind_description">The bear mind is depicted here, just image</string>
+</resources>

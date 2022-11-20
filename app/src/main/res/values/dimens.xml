@@ -1,0 +1,33 @@
+<resources>
+    <!--Toolbar-->
+    <dimen name="tool_bar_start">18dp</dimen>
+    <dimen name="tool_bar_start_with_navigation">25dp</dimen>
+    <dimen name="toolbar_min_height">56dp</dimen>
+
+    <!-- Auth screen -->
+    <dimen name="corner_radius">16dp</dimen>
+    <dimen name="width_enter_button">250dp</dimen>
+    <dimen name="height_enter_button">50dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_32">32sp</dimen>
+
+
+    <!-- Paddings in application -->
+    <dimen name="main_vertical_margin">16dp</dimen>
+    <dimen name="main_horizontal_margin">16dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_36">36dp</dimen>
+    <dimen name="padding_47">47dp</dimen>
+    <dimen name="padding_85">85dp</dimen>
+    <dimen name="padding_100">100dp</dimen>
+    <dimen name="padding_130">130dp</dimen>
+    <dimen name="padding_162">162dp</dimen>
+    <dimen name="padding_226">226dp</dimen>
+    <dimen name="padding_375">375dp</dimen>
+    <dimen name="padding_590">590dp</dimen>
+</resources>

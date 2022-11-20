@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth_background"
+    tools:context=".general.ui.auth.AuthFragment">
+
+    <ImageView
+        android:id="@+id/sun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sun"
+        android:layout_marginStart="@dimen/padding_6"
+        android:layout_marginEnd="@dimen/padding_226"
+        android:layout_marginTop="@dimen/padding_36"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/sun_description" />
+
+    <ImageView
+        android:id="@+id/cloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud"
+        android:layout_marginTop="@dimen/padding_22"
+        android:layout_marginStart="@dimen/padding_85"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/cloud_description" />
+
+    <ImageView
+        android:id="@+id/bear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/main_vertical_margin"
+        android:src="@drawable/bear"
+        android:layout_marginTop="@dimen/padding_375"
+        android:layout_marginBottom="@dimen/padding_6"
+        app:layout_constraintBottom_toTopOf="@id/layoutTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/bear_description" />
+
+    <ImageView
+        android:id="@+id/bear_mind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cloud_mind"
+        android:layout_marginTop="@dimen/padding_162"
+        android:layout_marginBottom="@dimen/padding_100"
+        android:layout_marginStart="@dimen/padding_85"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutTextPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/bear_mind_description" />
+
+    <TextView
+        android:id="@+id/my_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/presentation_app_name"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/text_size_32"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/padding_47"
+        android:layout_marginBottom="@dimen/padding_130"
+        app:layout_constraintBottom_toBottomOf="@id/bear_mind"
+        app:layout_constraintEnd_toEndOf="@id/bear_mind"
+        app:layout_constraintStart_toStartOf="@id/bear_mind"
+        app:layout_constraintTop_toTopOf="@id/bear_mind" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:passwordToggleContentDescription="@string/enter_something"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/dark_blue"
+        app:passwordToggleDrawable="@drawable/toggle_drawable_state"
+        app:layout_constraintBottom_toTopOf="@id/auth_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="@integer/size_password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/auth_button"
+        android:layout_width="@dimen/width_enter_button"
+        android:layout_height="@dimen/height_enter_button"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="@string/go"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_32"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/padding_590"
+        android:layout_marginBottom="@dimen/padding_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/thinkingPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/thinking_person"
+        android:layout_marginTop="@dimen/padding_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_button"
+        android:contentDescription="@string/thinking_person_description" />
+
+    <TextView
+        android:id="@+id/help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_text"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thinkingPerson" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
