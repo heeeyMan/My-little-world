@@ -69,6 +69,7 @@
         android:text="@string/presentation_app_name"
         android:textColor="@color/dark_blue"
         android:textSize="@dimen/text_size_32"
+        android:fontFamily="@font/nunito_bold"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/padding_47"
         android:layout_marginBottom="@dimen/padding_130"
@@ -92,6 +93,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/nunito_medium"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:ems="@integer/size_password"
             android:inputType="textPassword" />
@@ -122,6 +125,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/thinking_person"
         android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginBottom="@dimen/padding_28"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_button"
