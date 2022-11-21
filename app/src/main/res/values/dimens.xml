@@ -21,6 +21,7 @@
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_12">12dp</dimen>
     <dimen name="padding_22">22dp</dimen>
+    <dimen name="padding_28">22dp</dimen>
     <dimen name="padding_36">36dp</dimen>
     <dimen name="padding_47">47dp</dimen>
     <dimen name="padding_85">85dp</dimen>
