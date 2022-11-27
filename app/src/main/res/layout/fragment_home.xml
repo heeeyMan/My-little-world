@@ -6,18 +6,29 @@
     android:layout_height="match_parent"
     android:background="@color/light_beige"
     tools:context=".general.ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/size_user_icon"
+        android:layout_height="@dimen/size_user_icon"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/main_vertical_margin"
+        android:src="@drawable/sun"
+        app:shapeAppearance="@style/IconProfile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/dark_yellow"
+        app:strokeWidth="@dimen/width_user_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/person_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/main_vertical_margin"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/person_data_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

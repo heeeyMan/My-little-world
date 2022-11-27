@@ -12,6 +12,13 @@
     <string name="go">Go!</string>
     <string name="enter_something">Please, enter something … or not … \njust press enter button ;) </string>
     <string name="help_text">Don\'t understand what to do?</string>
+    
+    <!-- Home screen -->
+    <string name="first_name">First name:</string>
+    <string name="last_name">Last name:</string>
+    <string name="patronymic">Patronymic:</string>
+    <string name="status">Status:</string>
+    <string name="status_content">Take me to work … I\'m sociable</string>
 
     <!-- Auth screen description -->
     <string name="sun_description">The sun is depicted here, just image</string>

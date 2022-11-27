@@ -5,7 +5,7 @@ import com.alexvasin.littleworld.general.services.auth.IAuthSevice
 class AuthModel(
     private val dataService: IAuthSevice
     ): IAuthModel {
-    override fun getPasswordData(): String {
+    override fun getAuthData(): String {
         return dataService.getAuthData()
     }
 }
