@@ -15,10 +15,25 @@
     
     <!-- Home screen -->
     <string name="first_name">First name:</string>
+    <string name="my_first_name">Alexander</string>
     <string name="last_name">Last name:</string>
+    <string name="my_last_name">Vasin</string>
     <string name="patronymic">Patronymic:</string>
+    <string name="my_patronymic">Sergeevich</string>
     <string name="status">Status:</string>
     <string name="status_content">Take me to work … I\'m sociable</string>
+    <string name="general_info">General information</string>
+    <string name="education">My education</string>
+    <string name="experience">My work experience</string>
+    <string name="birthday_date">Date of birthday</string>
+    <string name="hometown">Hometown</string>
+    <string name="languages">Languages</string>
+    <string name="university">University:</string>
+    <string name="faculty">Faculty:</string>
+    <string name="specialization">Specialization:</string>
+    <string name="department">Department:</string>
+    <string name="place">Place of work:</string>
+    <string name="favorite">Favorite anime</string>
 
     <!-- Auth screen description -->
     <string name="sun_description">The sun is depicted here, just image</string>

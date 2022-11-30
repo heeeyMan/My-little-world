@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.alexvasin.littleworld.databinding.PersonDataItemBinding
 import com.alexvasin.littleworld.general.datamodels.PersonData
@@ -42,7 +41,7 @@ class PersonDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(moreItem: PersonData) {
-            binding.personDataField.text = context.getText(moreItem.personDataField)
+            binding.personDataField.text = context.getText(moreItem.personDataId)
             binding.personDataContent.text = moreItem.personDataContent
         }
     }
