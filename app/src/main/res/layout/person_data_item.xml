@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingVertical="@dimen/padding_6">
     <TextView
         android:id="@+id/person_data_field"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="@integer/weight_1"
+        android:gravity="end"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:fontFamily="@font/nunito_bold"
@@ -15,7 +17,9 @@
     </TextView>
     <TextView
         android:id="@+id/person_data_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="@integer/weight_1"
+        android:gravity="start"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_medium">

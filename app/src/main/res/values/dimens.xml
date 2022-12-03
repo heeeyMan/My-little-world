@@ -4,6 +4,7 @@
     <dimen name="tool_bar_start_with_navigation">25dp</dimen>
     <dimen name="toolbar_min_height">56dp</dimen>
     <dimen name="size_zero">0dp</dimen>
+    <dimen name="width_bottom_line">1dp</dimen>
     <!-- Auth screen -->
     <dimen name="corner_radius">16dp</dimen>
     <dimen name="width_enter_button">250dp</dimen>
@@ -40,6 +41,6 @@
     <dimen name="size_user_icon">100dp</dimen>
     <dimen name="height_divider">1dp</dimen>
     <dimen name="width_divider">2dp</dimen>
-    <dimen name="padding_exp_indicator">300dp</dimen>
+    <dimen name="padding_exp_indicator">320dp</dimen>
 
 </resources>

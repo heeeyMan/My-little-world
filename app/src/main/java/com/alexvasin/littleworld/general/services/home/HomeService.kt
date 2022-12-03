@@ -10,7 +10,7 @@ class HomeService : IHomeService {
         return arrayListOf(
             PersonData(R.string.first_name, "Alexander"),
             PersonData(R.string.last_name, "Vasin"),
-            PersonData(R.string.patronymic, "Sergeevich")
+            PersonData(R.string.nickname, "Radiofucker")
         )
     }
 

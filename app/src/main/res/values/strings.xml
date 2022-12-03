@@ -16,7 +16,7 @@
     <!-- Home screen -->
     <string name="first_name">First name:</string>
     <string name="last_name">Last name:</string>
-    <string name="patronymic">Patronymic:</string>
+    <string name="nickname">Nickname:</string>
     <string name="status">Status:</string>
     <string name="status_content">Take me to work … I\'m sociable …</string>
     <string name="general_info">General information</string>

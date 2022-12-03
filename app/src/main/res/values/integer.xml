@@ -3,4 +3,5 @@
     <integer name="size_password">10</integer>
     <integer name="weight_1">1</integer>
     <integer name="weight_2">2</integer>
+    <integer name="pi_2">90</integer>
 </resources>

@@ -44,13 +44,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/person_data"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/main_vertical_margin"
         android:layout_marginStart="@dimen/padding_36"
+        android:layout_marginTop="@dimen/main_vertical_margin"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/person_status"
-        tools:listitem="@layout/person_data_item"/>
+        tools:listitem="@layout/person_data_item" />
 
     <TextView
         android:id="@+id/favorite_anime"
@@ -61,7 +61,7 @@
         android:fontFamily="@font/nunito_extra_bold"
         android:textSize="@dimen/text_size_32"
         android:gravity="center"
-        android:textColor="@color/beige_200"
+        android:textColor="@color/yellow_300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar" />

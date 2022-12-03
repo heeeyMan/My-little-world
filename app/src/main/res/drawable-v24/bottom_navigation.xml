@@ -2,15 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="@dimen/corner_radius"/>
+            <solid android:color="@color/beige_200"/>
+            <corners
+                android:topRightRadius="@dimen/corner_radius"
+                android:topLeftRadius="@dimen/corner_radius" />
             <stroke
                 android:width="@dimen/width_bottom_line"
                 android:color="@color/yellow_300" />
-            <gradient
-                android:endColor="@color/yellow_300"
-                android:gradientRadius="700dp"
-                android:type="radial"
-                />
         </shape>
     </item>
 </selector>
