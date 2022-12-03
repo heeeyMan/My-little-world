@@ -1,23 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_beige"
+    android:background="@color/beige_200"
     tools:context=".general.ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+        android:id="@+id/person_status"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:text="@string/status"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/main_vertical_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/person_status_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_medium"
+        android:text="@string/status_content"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/padding_10"
+        app:layout_constraintStart_toEndOf="@id/person_status"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/size_user_icon"
+        android:layout_height="@dimen/size_user_icon"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/main_vertical_margin"
+        android:src="@drawable/sun"
+        app:shapeAppearance="@style/IconProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_status"
+        app:strokeColor="@color/yellow_300"
+        app:strokeWidth="@dimen/width_user_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/person_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/main_vertical_margin"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/person_status"
+        tools:listitem="@layout/person_data_item"/>
+
+    <TextView
+        android:id="@+id/favorite_anime"
+        android:layout_width="@dimen/width_enter_button"
+        android:layout_height="@dimen/height_enter_button"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:background="@drawable/button_state"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:textSize="@dimen/text_size_32"
+        android:gravity="center"
+        android:textColor="@color/beige_200"
+        android:text="@string/favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+    <ExpandableListView
+        android:id="@+id/more_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@drawable/more_info_state"
+        android:indicatorLeft="@dimen/padding_exp_indicator"
+        android:layout_marginTop="@dimen/padding_36"
+        android:layout_marginHorizontal="@dimen/main_horizontal_margin"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        android:divider="#00000000"
+        app:layout_constraintTop_toBottomOf="@id/favorite_anime"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

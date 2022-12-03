@@ -1,9 +1,9 @@
 <resources>
-    <!--Toolbar-->
+    <!--Toolbar / Bottom navigation -->
     <dimen name="tool_bar_start">18dp</dimen>
     <dimen name="tool_bar_start_with_navigation">25dp</dimen>
     <dimen name="toolbar_min_height">56dp</dimen>
-
+    <dimen name="size_zero">0dp</dimen>
     <!-- Auth screen -->
     <dimen name="corner_radius">16dp</dimen>
     <dimen name="width_enter_button">250dp</dimen>
@@ -11,6 +11,7 @@
 
     <!-- Text size -->
     <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
     <dimen name="text_size_32">32sp</dimen>
 
 
@@ -31,4 +32,14 @@
     <dimen name="padding_226">226dp</dimen>
     <dimen name="padding_375">375dp</dimen>
     <dimen name="padding_590">590dp</dimen>
+
+    <!-- Home screen -->
+    <dimen name="radius_border">30dp</dimen>
+    <dimen name="corner_user_icon">50%</dimen>
+    <dimen name="width_user_icon">1dp</dimen>
+    <dimen name="size_user_icon">100dp</dimen>
+    <dimen name="height_divider">1dp</dimen>
+    <dimen name="width_divider">2dp</dimen>
+    <dimen name="padding_exp_indicator">300dp</dimen>
+
 </resources>

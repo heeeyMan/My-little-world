@@ -8,7 +8,7 @@ class AuthViewModel(private val model: IAuthModel,
                     private val router: IAuthRouter
                     ) : ViewModel(), IAuthView {
     override fun pressedEnter(password: String) {
-        if (password == model.getPasswordData()) {
+        if (password == model.getAuthData()) {
             //router.openHomeScreen()
         }
         router.openHomeScreen()

@@ -2,18 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.GeneralStyle" parent="Theme.MaterialComponents.Light.Bridge">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_yellow</item>
-        <item name="colorPrimaryVariant">@color/dark_green</item>
-        <item name="colorOnPrimary">@color/light_beige</item>
+        <item name="colorPrimary">@color/yellow_300</item>
+        <item name="colorPrimaryVariant">@color/green_200</item>
+        <item name="colorOnPrimary">@color/beige_200</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/light_blue</item>
-        <item name="colorSecondaryVariant">@color/dark_blue</item>
+        <item name="colorSecondary">@color/blue_200</item>
+        <item name="colorSecondaryVariant">@color/blue_700</item>
         <item name="colorOnSecondary">@color/red</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:textColor">?attr/colorSecondaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/nunito_regular</item>
     </style>
 
     <style name="Theme.GeneralStyle.NoActionBar">
