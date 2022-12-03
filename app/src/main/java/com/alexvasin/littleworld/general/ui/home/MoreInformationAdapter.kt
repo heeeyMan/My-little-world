@@ -2,11 +2,13 @@ package com.alexvasin.littleworld.general.ui.home
 
 import android.content.Context
 import android.graphics.Typeface
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.general.datamodels.ExpandableDataClass
 import com.alexvasin.littleworld.general.datamodels.MoreInfoData
@@ -73,6 +75,7 @@ class MoreInformationAdapter(
         return view
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun getChildView(
         groupPosition: Int,
         childPosition: Int,
@@ -86,6 +89,7 @@ class MoreInformationAdapter(
         val view = layoutInflater.inflate(R.layout.person_data_item, null)
         val personData = view.findViewById<TextView>(R.id.person_data_field)
         val personDataContent = view.findViewById<TextView>(R.id.person_data_content)
+        personData.setTextColor(context.getColor(R.color.green_400))
         personData?.text = context.getString(content.fieldId)
         personDataContent?.text = content.content
         return view

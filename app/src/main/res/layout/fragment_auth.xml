@@ -69,6 +69,7 @@
         android:text="@string/presentation_app_name"
         android:textColor="@color/blue_700"
         android:textSize="@dimen/text_size_32"
+        android:textStyle="bold"
         android:fontFamily="@font/nunito_extra_bold"
         android:layout_marginTop="@dimen/padding_47"
         android:layout_marginBottom="@dimen/padding_130"

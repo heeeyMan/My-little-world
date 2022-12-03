@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_extra_bold"
-        android:text="@string/status"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/main_vertical_margin"
         android:layout_marginStart="@dimen/main_vertical_margin"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_medium"
-        android:text="@string/status_content"
+        android:textColor="@color/black"
         android:layout_marginTop="@dimen/main_vertical_margin"
         android:layout_marginStart="@dimen/padding_10"
         app:layout_constraintStart_toEndOf="@id/person_status"
@@ -36,7 +36,6 @@
         android:layout_height="@dimen/size_user_icon"
         android:layout_marginTop="@dimen/main_vertical_margin"
         android:layout_marginStart="@dimen/main_vertical_margin"
-        android:src="@drawable/sun"
         app:shapeAppearance="@style/IconProfile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/person_status"
@@ -48,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/main_vertical_margin"
-        android:layout_marginStart="@dimen/main_vertical_margin"
+        android:layout_marginStart="@dimen/padding_36"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/person_status"
         tools:listitem="@layout/person_data_item"/>
@@ -57,13 +56,12 @@
         android:id="@+id/favorite_anime"
         android:layout_width="@dimen/width_enter_button"
         android:layout_height="@dimen/height_enter_button"
-        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginTop="@dimen/padding_36"
         android:background="@drawable/button_state"
         android:fontFamily="@font/nunito_extra_bold"
         android:textSize="@dimen/text_size_32"
         android:gravity="center"
         android:textColor="@color/beige_200"
-        android:text="@string/favorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar" />
@@ -80,5 +78,17 @@
         app:layout_constraintEnd_toStartOf="parent"
         android:divider="#00000000"
         app:layout_constraintTop_toBottomOf="@id/favorite_anime"/>
+
+    <ImageView
+        android:id="@+id/panda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_36"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:layout_marginBottom="@dimen/padding_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/more_information"
+        android:contentDescription="@string/panda_mind_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

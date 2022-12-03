@@ -30,7 +30,7 @@ class AuthFragment : Fragment() {
         val authInfoToast = Toast.makeText(
             this.context,
             R.string.enter_something,
-            Toast.LENGTH_SHORT
+            Toast.LENGTH_LONG
         )
         authInfoToast.setGravity(Gravity.CENTER, 0,0)
         binding.thinkingPerson.setOnClickListener {
