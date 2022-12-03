@@ -37,6 +37,7 @@ class HomeFragment : Fragment() {
         binding.personStatus.text = getString(R.string.status)
         binding.personStatusContent.text = getString(R.string.status_content)
         binding.avatar.setImageResource(R.drawable.owner_person)
+        binding.editPhoto.text = getString(R.string.edit_photo)
         binding.favoriteAnime.text = getString(R.string.favorite)
         val panda = binding.panda
         panda.setImageResource(R.drawable.panda_bear)

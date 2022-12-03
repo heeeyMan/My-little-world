@@ -32,6 +32,7 @@
     <string name="place">Place of work:</string>
     <string name="favorite">Favorite anime</string>
     <string name="panda_text">Have a nice day!\nSmile at me… please :)</string>
+    <string name="edit_photo">Edit my photo</string>
 
     <!-- Auth screen description -->
     <string name="sun_description">The sun is depicted here, just image</string>

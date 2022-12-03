@@ -3,14 +3,10 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="@dimen/corner_radius"/>
-            <stroke
-                android:width="@dimen/width_bottom_line"
-                android:color="@color/yellow_300" />
             <gradient
                 android:endColor="@color/yellow_300"
-                android:gradientRadius="@dimen/gradient_radius_900"
-                android:type="radial"
-                />
+                android:gradientRadius="@dimen/gradient_radius_200"
+                android:type="radial" />
         </shape>
     </item>
 </selector>

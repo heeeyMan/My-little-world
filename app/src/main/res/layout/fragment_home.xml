@@ -47,10 +47,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_36"
-        android:layout_marginTop="@dimen/main_vertical_margin"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@id/person_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar"
         tools:listitem="@layout/person_data_item" />
+
+    <TextView
+        android:id="@+id/edit_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        android:background="@drawable/edit_photo_background"
+        android:fontFamily="@font/nunito_extra_bold"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/padding_10"
+        android:paddingVertical="@dimen/padding_12"
+        android:textColor="@color/yellow_300"
+        app:layout_constraintEnd_toEndOf="@+id/avatar"
+        app:layout_constraintStart_toStartOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@id/avatar" />
 
     <TextView
         android:id="@+id/favorite_anime"
@@ -61,10 +75,10 @@
         android:fontFamily="@font/nunito_extra_bold"
         android:textSize="@dimen/text_size_32"
         android:gravity="center"
-        android:textColor="@color/yellow_300"
+        android:textColor="@color/green_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/avatar" />
+        app:layout_constraintTop_toBottomOf="@id/edit_photo" />
 
     <ExpandableListView
         android:id="@+id/more_information"
