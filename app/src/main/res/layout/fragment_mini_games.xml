@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_beige"
+    android:background="@color/beige_200"
     tools:context=".general.ui.mini_games.MiniGamesFragment">
 
     <TextView

@@ -8,10 +8,7 @@ import android.widget.ExpandableListAdapter
 import android.widget.ExpandableListView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.databinding.FragmentHomeBinding
-import com.alexvasin.littleworld.general.datamodels.ExpandableDataClass
-import com.alexvasin.littleworld.general.datamodels.MoreInfoData
 import com.alexvasin.littleworld.general.models.home.assembly.HomeAssembly
 
 class HomeFragment : Fragment() {
@@ -25,36 +22,6 @@ class HomeFragment : Fragment() {
     private val adapter: PersonDataAdapter get() = _adapter!!
     private var homeViewModel: HomeViewModel? = null
 
-    private var data = listOf(
-        ExpandableDataClass(
-            R.string.general_info, listOf(
-                MoreInfoData(R.string.birthday_date, "05.03.1999"),
-                MoreInfoData(R.string.hometown, "Pervomaisk"),
-                MoreInfoData(R.string.languages, "Russian, English"),
-            )
-        ),
-        ExpandableDataClass(
-            R.string.education, listOf(
-                MoreInfoData(
-                    R.string.university,
-                    "N. I. Lobachevsky National Research University"
-                ),
-                MoreInfoData(R.string.faculty, "Radiophysics"),
-                MoreInfoData(R.string.specialization, "Radiophysics"),
-                MoreInfoData(
-                    R.string.department,
-                    "Theory of oscillations and automatic regulation"
-                ),
-            )
-        ),
-        ExpandableDataClass(
-            R.string.experience, listOf(
-                MoreInfoData(R.string.place, "N. I. Lobachevsky National Research University"),
-                MoreInfoData(R.string.place, "SWTec"),
-                MoreInfoData(R.string.place, "Central Research Institute of Burevestnik"),
-            )
-        ),
-    )
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -64,7 +31,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         _adapter = PersonDataAdapter()
         moreInfo = binding.moreInformation
-        moreInfo!!.setAdapter(context?.let { MoreInformationAdapter(it.applicationContext, data) })
         val recyclerView = binding.personData
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
@@ -84,6 +50,7 @@ class HomeFragment : Fragment() {
                         it
                     )
                 }
+                moreInfo?.setAdapter(moreInfoAdapter)
             }
         }
     }
@@ -91,5 +58,9 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        moreInfo = null
+        moreInfoAdapter = null
+        _adapter = null
+        homeViewModel = null
     }
 }

@@ -5,13 +5,15 @@
     android:layout_height="wrap_content">
     <TextView
         android:id="@+id/person_data_field"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
         android:paddingHorizontal="@dimen/padding_10">
     </TextView>
     <TextView
         android:id="@+id/person_data_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_medium">
     </TextView>
 </androidx.appcompat.widget.LinearLayoutCompat>

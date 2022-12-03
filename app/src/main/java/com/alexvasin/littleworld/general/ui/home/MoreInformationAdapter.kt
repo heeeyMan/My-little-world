@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
-import android.widget.Toast
 import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.general.datamodels.ExpandableDataClass
-import com.alexvasin.littleworld.general.datamodels.PersonData
+import com.alexvasin.littleworld.general.datamodels.MoreInfoData
 
 class MoreInformationAdapter(
     private val context: Context,
@@ -26,7 +25,7 @@ class MoreInformationAdapter(
     }
 
     override fun getGroup(groupPosition: Int): Any {
-        return context.getString(moreInfoData[groupPosition].headerId)
+        return moreInfoData[groupPosition].headerId
     }
 
     override fun getChild(
@@ -64,23 +63,14 @@ class MoreInformationAdapter(
         convertView: View?,
         parent: ViewGroup?
     ): View {
-        var view = convertView
-        val content = getGroup(groupPosition) as String
-        if (view != null) {
-            val layoutInflater =
-                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = layoutInflater.inflate(R.layout.home_group_name, null)
-            val header = convertView?.findViewById<TextView>(R.id.group_name)
-            header?.setTypeface(null, Typeface.BOLD)
-            header?.text = content
-            Toast.makeText(
-                this.context,
-                R.string.enter_something,
-                Toast.LENGTH_SHORT
-            ).show()
-            return view
-        }
-        return View(context)
+        val contentId = getGroup(groupPosition) as Int
+        val layoutInflater =
+            context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(R.layout.home_group_name, null)
+        val header = view.findViewById<TextView>(R.id.group_name)
+        header?.setTypeface(null, Typeface.BOLD)
+        header?.text = context.getString(contentId)
+        return view
     }
 
     override fun getChildView(
@@ -90,24 +80,15 @@ class MoreInformationAdapter(
         convertView: View?,
         parent: ViewGroup?
     ): View {
-        var view = convertView
-        val content = getChild(groupPosition, childPosition) as PersonData
-        if (view != null) {
-            val layoutInflater =
-                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = layoutInflater.inflate(R.layout.person_data_item, null)
-            val personData = convertView?.findViewById<TextView>(R.id.person_data)
-            val personDataContent = convertView?.findViewById<TextView>(R.id.person_data_content)
-            personData?.text = context.getString(content.personDataId)
-            personDataContent?.text = content.personDataContent
-            Toast.makeText(
-                this.context,
-                R.string.first_name,
-                Toast.LENGTH_SHORT
-            ).show()
-            return view
-        }
-        return View(context)
+        val content = getChild(groupPosition, childPosition) as MoreInfoData
+        val layoutInflater =
+            context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(R.layout.person_data_item, null)
+        val personData = view.findViewById<TextView>(R.id.person_data_field)
+        val personDataContent = view.findViewById<TextView>(R.id.person_data_content)
+        personData?.text = context.getString(content.fieldId)
+        personDataContent?.text = content.content
+        return view
     }
 
 }
