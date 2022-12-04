@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.alexvasin.littleworld.R
-import com.alexvasin.littleworld.databinding.EachItemBinding
+import com.alexvasin.littleworld.databinding.MoreInfoItemBinding
 import com.alexvasin.littleworld.general.datamodels.ExpandableDataClass
 
-class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MoreInfoAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var moreDataList: ArrayList<ExpandableDataClass> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val itemView = EachItemBinding.inflate(
+        val itemView = MoreInfoItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
@@ -23,7 +23,7 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val itemViewHolder = holder as Adapter.MoreViewHolder
+        val itemViewHolder = holder as MoreInfoAdapter.MoreViewHolder
         val currentUser = moreDataList[position]
         itemViewHolder.bind(currentUser)
     }
@@ -33,7 +33,7 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     inner class MoreViewHolder(
-        private val binding: EachItemBinding,
+        private val binding: MoreInfoItemBinding,
         private val context: Context
     ) :
         RecyclerView.ViewHolder(binding.root) {

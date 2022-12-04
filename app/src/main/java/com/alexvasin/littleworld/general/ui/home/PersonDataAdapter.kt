@@ -47,7 +47,7 @@ class PersonDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setMoreItems(items: ArrayList<PersonData>) {
+    fun setMoreItems(items: List<PersonData>) {
         personDataList.clear()
         personDataList.addAll(items)
         notifyDataSetChanged()
