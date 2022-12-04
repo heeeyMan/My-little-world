@@ -14,6 +14,7 @@
     <!-- Text size -->
     <dimen name="text_size_14">14sp</dimen>
     <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
     <dimen name="text_size_32">32sp</dimen>
 
 
@@ -46,5 +47,6 @@
     <dimen name="padding_exp_indicator">320dp</dimen>
     <dimen name="gradient_radius_200">200dp</dimen>
     <dimen name="gradient_radius_900">900dp</dimen>
+    <dimen name="height_head">50dp</dimen>
 
 </resources>

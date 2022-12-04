@@ -80,18 +80,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_photo" />
 
-    <ExpandableListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/more_information"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:groupIndicator="@drawable/more_info_state"
-        android:indicatorLeft="@dimen/padding_exp_indicator"
         android:layout_marginTop="@dimen/padding_36"
         android:layout_marginHorizontal="@dimen/main_horizontal_margin"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        android:divider="#00000000"
-        app:layout_constraintTop_toBottomOf="@id/favorite_anime"/>
+        app:layout_constraintTop_toBottomOf="@id/favorite_anime"
+        tools:listitem="@layout/more_info_item"/>
 
     <ImageView
         android:id="@+id/panda"

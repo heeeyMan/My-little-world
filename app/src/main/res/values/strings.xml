@@ -41,4 +41,5 @@
     <string name="thinking_person_description">The thinking person is depicted here \n you need to click on it to see the hint</string>
     <string name="bear_mind_description">The bear mind is depicted here, just image</string>
     <string name="panda_mind_description">The panda mind is depicted here, just image</string>
+    <string name="arrow_down">The arrow down is depicted here, just image</string>
 </resources>
