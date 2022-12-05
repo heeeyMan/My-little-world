@@ -30,10 +30,9 @@ class HomeFragment : Fragment() {
     ): View {
         homeViewModel = HomeAssembly().build()
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
         binding.personStatus.text = getString(R.string.status)
         binding.personStatusContent.text = getString(R.string.status_content)
-        binding.avatar.setImageResource(R.drawable.owner_person)
+        binding.icon.setImageResource(R.drawable.owner_person)
         binding.editPhoto.text = getString(R.string.edit_photo)
         binding.favoriteAnime.text = getString(R.string.favorite)
         val panda = binding.panda

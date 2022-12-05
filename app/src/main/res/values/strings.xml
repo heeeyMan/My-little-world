@@ -42,4 +42,8 @@
     <string name="bear_mind_description">The bear mind is depicted here, just image</string>
     <string name="panda_mind_description">The panda mind is depicted here, just image</string>
     <string name="arrow_down">The arrow down is depicted here, just image</string>
+    <string name="heart_empty">The heart empty is depicted here, just image</string>
+    <string name="heart_color">The heart color is depicted here, just image</string>
+    <string name="sort">Sort by</string>
+    <string name="rating">Rating:</string>
 </resources>

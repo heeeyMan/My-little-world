@@ -49,4 +49,9 @@
     <dimen name="gradient_radius_900">900dp</dimen>
     <dimen name="height_head">50dp</dimen>
 
+    <!-- Anime screen -->
+    <dimen name="height_anime_item">80dp</dimen>
+    <dimen name="size_anime_icon">60dp</dimen>
+    <dimen name="width_sort_button">150dp</dimen>
+    <dimen name="height_sort_button">50dp</dimen>
 </resources>

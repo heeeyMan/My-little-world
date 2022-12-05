@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/avatar"
+        android:id="@+id/icon"
         android:layout_width="@dimen/size_user_icon"
         android:layout_height="@dimen/size_user_icon"
         android:layout_marginTop="@dimen/main_vertical_margin"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/padding_36"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/icon"
         tools:listitem="@layout/person_data_item" />
 
     <TextView
@@ -59,12 +59,13 @@
         android:background="@drawable/edit_photo_background"
         android:fontFamily="@font/nunito_extra_bold"
         android:gravity="center"
+        android:textStyle="bold"
         android:paddingHorizontal="@dimen/padding_10"
         android:paddingVertical="@dimen/padding_12"
         android:textColor="@color/yellow_300"
-        app:layout_constraintEnd_toEndOf="@+id/avatar"
-        app:layout_constraintStart_toStartOf="@id/avatar"
-        app:layout_constraintTop_toBottomOf="@id/avatar" />
+        app:layout_constraintEnd_toEndOf="@+id/icon"
+        app:layout_constraintStart_toStartOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
 
     <TextView
         android:id="@+id/favorite_anime"

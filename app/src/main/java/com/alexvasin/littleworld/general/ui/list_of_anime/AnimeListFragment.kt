@@ -4,37 +4,48 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.databinding.FragmentAnimeListBinding
+import com.alexvasin.littleworld.general.models.anime.assembly.AnimeAssembly
 
 class AnimeListFragment : Fragment() {
 
     private var _binding: FragmentAnimeListBinding? = null
-
     private val binding get() = _binding!!
-
+    private var animeAdapter: AnimeCardDataAdapter? = null
+    private var viewModel: AnimeListViewModel? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val coolListViewModel =
-            ViewModelProvider(this).get(AnimeListViewModel::class.java)
-
         _binding = FragmentAnimeListBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding.sortButton.text = getString(R.string.sort)
+        viewModel = AnimeAssembly().build()
+        animeAdapter = AnimeCardDataAdapter()
+        val recyclerView = binding.animeList
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = animeAdapter
 
-        val textView: TextView = binding.textDashboard
-        coolListViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel?.apply {
+            animeData.observe(viewLifecycleOwner){
+                animeAdapter?.setMoreItems(it)
+            }
         }
-        return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        viewModel = null
+        animeAdapter = null
     }
 }
