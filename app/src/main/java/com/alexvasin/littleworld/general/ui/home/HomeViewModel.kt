@@ -13,13 +13,16 @@ class HomeViewModel(
 ) : ViewModel(), IHomeView {
     var personData = MutableLiveData<ArrayList<PersonData>>()
     val moreInfoData = MutableLiveData<List<ExpandableDataClass>>()
+
     init {
         personDataInit(model.getPersonData())
         moreInfoDataInit(model.getMoreInfoData())
     }
+
     private fun personDataInit(data: ArrayList<PersonData>) {
         personData.postValue(data)
     }
+
     private fun moreInfoDataInit(data: List<ExpandableDataClass>) {
         moreInfoData.postValue(data)
     }

@@ -45,7 +45,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/person_data"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/size_zero"
         android:layout_marginStart="@dimen/padding_36"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/icon"
@@ -84,24 +84,26 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/more_information"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/size_zero"
         android:layout_marginTop="@dimen/padding_36"
         android:layout_marginHorizontal="@dimen/main_horizontal_margin"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/favorite_anime"
-        tools:listitem="@layout/more_info_item"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/more_info_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <ImageView
         android:id="@+id/panda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_36"
-        android:layout_marginTop="@dimen/main_vertical_margin"
-        android:layout_marginBottom="@dimen/padding_6"
+        android:contentDescription="@string/panda_mind_description"
+        app:layout_constraintBottom_toBottomOf="@id/more_information"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/more_information"
-        android:contentDescription="@string/panda_mind_description" />
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

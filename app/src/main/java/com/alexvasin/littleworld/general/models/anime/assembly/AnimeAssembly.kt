@@ -7,8 +7,7 @@ import com.alexvasin.littleworld.general.ui.list_of_anime.AnimeListViewModel
 
 class AnimeAssembly: IAnimeAssembly {
     override fun build(): AnimeListViewModel {
-        val dataService = AnimeService()
-        val model = AnimeModel(dataService)
+        val model = AnimeModel()
         val router = AnimeRouter()
         return AnimeListViewModel(model, router)
     }

@@ -12,12 +12,12 @@
         android:title="@string/list_of_anime" />
 
     <item
-        android:id="@+id/navigation_mini_games"
-        android:icon="@drawable/games"
-        android:title="@string/games" />
-    <item
         android:id="@+id/navigation_other"
         android:icon="@drawable/other"
         android:title="@string/other" />
+    <item
+        android:id="@+id/navigation_favorite_anime"
+        android:icon="@drawable/games"
+        android:title="@string/games" />
 
 </menu>

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_anime_list,
-                R.id.navigation_mini_games,
+                R.id.navigation_favorite_anime,
                 R.id.navigation_other
             )
         )

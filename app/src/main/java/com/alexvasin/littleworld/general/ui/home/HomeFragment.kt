@@ -1,10 +1,7 @@
 package com.alexvasin.littleworld.general.ui.home
 
 import android.os.Bundle
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +9,7 @@ import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.databinding.FragmentHomeBinding
 import com.alexvasin.littleworld.general.models.home.assembly.HomeAssembly
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnHomeClickListener {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -45,6 +42,7 @@ class HomeFragment : Fragment() {
         pandaToast.setGravity(Gravity.CENTER, 0, 0);
         binding.panda.setOnClickListener {
             pandaToast.show()
+            binding.panda.visibility = View.GONE
         }
         _adapter = PersonDataAdapter()
         val recyclerView = binding.personData
@@ -76,5 +74,13 @@ class HomeFragment : Fragment() {
         _binding = null
         _adapter = null
         homeViewModel = null
+    }
+
+    override fun onItemClick(hide: Boolean) {
+        if (hide) {
+            binding.panda.visibility = View.GONE
+        } else {
+            binding.panda.visibility = View.VISIBLE
+        }
     }
 }

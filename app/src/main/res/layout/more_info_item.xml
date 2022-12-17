@@ -2,7 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/beige_200">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/beige_200"
+    app:cardElevation="@dimen/size_zero">
 
     <LinearLayout
         android:id="@+id/linear_layout"

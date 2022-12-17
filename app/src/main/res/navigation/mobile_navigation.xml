@@ -18,14 +18,14 @@
         tools:layout="@layout/fragment_anime_list" />
 
     <fragment
-        android:id="@+id/navigation_mini_games"
-        android:name="com.alexvasin.littleworld.general.ui.mini_games.MiniGamesFragment"
-        android:label="@string/games"
-        tools:layout="@layout/fragment_mini_games" />
+        android:id="@+id/navigation_favorite_anime"
+        android:name="com.alexvasin.littleworld.general.ui.favorite.FavoriteAnimeFragment"
+        android:label="@string/other"
+        tools:layout="@layout/fragment_favorite_anime" />
 
     <fragment
         android:id="@+id/navigation_other"
         android:name="com.alexvasin.littleworld.general.ui.other.OtherFragment"
         android:label="@string/other"
-        tools:layout="@layout/fragment_mini_games" />
+        tools:layout="@layout/fragment_other_list" />
 </navigation>

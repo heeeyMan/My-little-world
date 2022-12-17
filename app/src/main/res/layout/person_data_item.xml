@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="@integer/weight_1"
         android:gravity="end"
-        android:textColor="@color/black"
+        android:textColor="@color/green_400"
         android:textStyle="bold"
         android:fontFamily="@font/nunito_bold"
         android:paddingHorizontal="@dimen/padding_10">
