@@ -1,7 +1,6 @@
 package com.alexvasin.littleworld.general.ui.activities
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.NavHostFragment
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_anime_list,
-                R.id.navigation_mini_games,
+                R.id.navigation_favorite_anime,
                 R.id.navigation_other
             )
         )

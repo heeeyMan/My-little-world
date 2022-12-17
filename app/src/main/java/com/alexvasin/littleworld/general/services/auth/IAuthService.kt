@@ -1,5 +1,5 @@
 package com.alexvasin.littleworld.general.services.auth
 
-interface IAuthSevice {
+interface IAuthService {
     fun getAuthData(): String
 }

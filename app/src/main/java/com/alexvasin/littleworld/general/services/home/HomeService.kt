@@ -2,7 +2,6 @@ package com.alexvasin.littleworld.general.services.home
 
 import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.general.datamodels.ExpandableDataClass
-import com.alexvasin.littleworld.general.datamodels.MoreInfoData
 import com.alexvasin.littleworld.general.datamodels.PersonData
 
 class HomeService : IHomeService {
@@ -18,20 +17,20 @@ class HomeService : IHomeService {
         return listOf(
             ExpandableDataClass(
                 R.string.general_info, listOf(
-                    MoreInfoData(R.string.birthday_date, "05.03.1999"),
-                    MoreInfoData(R.string.hometown, "Pervomaisk"),
-                    MoreInfoData(R.string.languages, "Russian, English"),
+                    PersonData(R.string.birthday_date, "05.03.1999"),
+                    PersonData(R.string.hometown, "Pervomaisk"),
+                    PersonData(R.string.languages, "Russian, English"),
                 )
             ),
             ExpandableDataClass(
                 R.string.education, listOf(
-                    MoreInfoData(
+                    PersonData(
                         R.string.university,
                         "N. I. Lobachevsky National Research University"
                     ),
-                    MoreInfoData(R.string.faculty, "Radiophysics"),
-                    MoreInfoData(R.string.specialization, "Radiophysics"),
-                    MoreInfoData(
+                    PersonData(R.string.faculty, "Radiophysics"),
+                    PersonData(R.string.specialization, "Radiophysics"),
+                    PersonData(
                         R.string.department,
                         "Theory of oscillations and automatic regulation"
                     ),
@@ -39,9 +38,9 @@ class HomeService : IHomeService {
             ),
             ExpandableDataClass(
                 R.string.experience, listOf(
-                    MoreInfoData(R.string.place, "N. I. Lobachevsky National Research University"),
-                    MoreInfoData(R.string.place, "SWTec"),
-                    MoreInfoData(R.string.place, "Central Research Institute of Burevestnik"),
+                    PersonData(R.string.place, "N. I. Lobachevsky National Research University"),
+                    PersonData(R.string.place, "SWTec"),
+                    PersonData(R.string.place, "Central Research Institute of Burevestnik"),
                 )
             ),
         )

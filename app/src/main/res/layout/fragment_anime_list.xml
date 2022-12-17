@@ -4,19 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/beige_200"    tools:context=".general.ui.list_of_anime.AnimeListFragment">
+    android:background="@color/beige_200"
+    tools:context=".general.ui.list_of_anime.AnimeListFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/sort_button"
+        android:layout_width="@dimen/width_sort_button"
+        android:layout_height="@dimen/height_sort_button"
+        android:layout_marginStart="@dimen/main_horizontal_margin"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        android:gravity="center"
+        android:background="@drawable/edit_photo_background"
+        android:textSize="@dimen/text_size_24"
+        android:textColor="@color/yellow_300"
+        android:textStyle="bold"
+        android:fontFamily="@font/nunito_extra_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/anime_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_zero"
+        android:layout_marginTop="@dimen/main_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/sort_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

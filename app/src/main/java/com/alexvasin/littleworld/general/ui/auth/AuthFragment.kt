@@ -32,7 +32,7 @@ class AuthFragment : Fragment() {
             R.string.enter_something,
             Toast.LENGTH_LONG
         )
-        authInfoToast.setGravity(Gravity.CENTER, 0,0)
+        authInfoToast.setGravity(Gravity.CENTER, 0, 0)
         binding.thinkingPerson.setOnClickListener {
             authInfoToast.show()
         }

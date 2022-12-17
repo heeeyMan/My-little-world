@@ -1,6 +1,6 @@
 package com.alexvasin.littleworld.general.services.auth
 
-class AuthService: IAuthSevice {
+class AuthService : IAuthService {
     override fun getAuthData(): String {
         return "world"
     }

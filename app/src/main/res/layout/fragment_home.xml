@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/avatar"
+        android:id="@+id/icon"
         android:layout_width="@dimen/size_user_icon"
         android:layout_height="@dimen/size_user_icon"
         android:layout_marginTop="@dimen/main_vertical_margin"
@@ -45,10 +45,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/person_data"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/size_zero"
         android:layout_marginStart="@dimen/padding_36"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/avatar"
+        app:layout_constraintTop_toTopOf="@id/icon"
         tools:listitem="@layout/person_data_item" />
 
     <TextView
@@ -59,12 +59,13 @@
         android:background="@drawable/edit_photo_background"
         android:fontFamily="@font/nunito_extra_bold"
         android:gravity="center"
+        android:textStyle="bold"
         android:paddingHorizontal="@dimen/padding_10"
         android:paddingVertical="@dimen/padding_12"
         android:textColor="@color/yellow_300"
-        app:layout_constraintEnd_toEndOf="@+id/avatar"
-        app:layout_constraintStart_toStartOf="@id/avatar"
-        app:layout_constraintTop_toBottomOf="@id/avatar" />
+        app:layout_constraintEnd_toEndOf="@+id/icon"
+        app:layout_constraintStart_toStartOf="@id/icon"
+        app:layout_constraintTop_toBottomOf="@id/icon" />
 
     <TextView
         android:id="@+id/favorite_anime"
@@ -80,29 +81,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_photo" />
 
-    <ExpandableListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/more_information"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:groupIndicator="@drawable/more_info_state"
-        android:indicatorLeft="@dimen/padding_exp_indicator"
+        android:layout_height="@dimen/size_zero"
         android:layout_marginTop="@dimen/padding_36"
         android:layout_marginHorizontal="@dimen/main_horizontal_margin"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        android:divider="#00000000"
-        app:layout_constraintTop_toBottomOf="@id/favorite_anime"/>
+        app:layout_constraintTop_toBottomOf="@id/favorite_anime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/more_info_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <ImageView
         android:id="@+id/panda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/padding_36"
-        android:layout_marginTop="@dimen/main_vertical_margin"
-        android:layout_marginBottom="@dimen/padding_6"
+        android:contentDescription="@string/panda_mind_description"
+        app:layout_constraintBottom_toBottomOf="@id/more_information"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/more_information"
-        android:contentDescription="@string/panda_mind_description" />
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
