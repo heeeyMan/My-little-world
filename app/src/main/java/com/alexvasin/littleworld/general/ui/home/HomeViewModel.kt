@@ -26,4 +26,8 @@ class HomeViewModel(
     private fun moreInfoDataInit(data: List<ExpandableDataClass>) {
         moreInfoData.postValue(data)
     }
+
+    override fun clickOnFavorite() {
+        router.navigationToFavorite()
+    }
 }

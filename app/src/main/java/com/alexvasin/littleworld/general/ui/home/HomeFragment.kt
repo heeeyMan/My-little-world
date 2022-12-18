@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexvasin.littleworld.R
 import com.alexvasin.littleworld.databinding.FragmentHomeBinding
@@ -25,25 +26,17 @@ class HomeFragment : Fragment(), OnHomeClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        homeViewModel = HomeAssembly().build()
+        homeViewModel = HomeAssembly(findNavController()).build()
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.personStatus.text = getString(R.string.status)
         binding.personStatusContent.text = getString(R.string.status_content)
         binding.icon.setImageResource(R.drawable.owner_person)
         binding.editPhoto.text = getString(R.string.edit_photo)
         binding.favoriteAnime.text = getString(R.string.favorite)
-        val panda = binding.panda
-        panda.setImageResource(R.drawable.panda_bear)
-        val pandaToast = Toast.makeText(
-            this.context,
-            R.string.panda_text,
-            Toast.LENGTH_SHORT
-        )
-        pandaToast.setGravity(Gravity.CENTER, 0, 0);
-        binding.panda.setOnClickListener {
-            pandaToast.show()
-            binding.panda.visibility = View.GONE
+        binding.favoriteAnime.setOnClickListener {
+
         }
+
         _adapter = PersonDataAdapter()
         val recyclerView = binding.personData
         recyclerView.layoutManager = LinearLayoutManager(context)

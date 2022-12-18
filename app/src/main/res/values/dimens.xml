@@ -34,7 +34,7 @@
     <dimen name="padding_130">130dp</dimen>
     <dimen name="padding_162">162dp</dimen>
     <dimen name="padding_226">226dp</dimen>
-    <dimen name="padding_375">375dp</dimen>
+    <dimen name="padding_370">340dp</dimen>
     <dimen name="padding_590">590dp</dimen>
 
     <!-- Home screen -->
