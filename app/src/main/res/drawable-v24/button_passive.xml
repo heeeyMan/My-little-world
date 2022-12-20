@@ -5,9 +5,9 @@
             <corners android:radius="@dimen/corner_radius"/>
             <stroke
                 android:width="@dimen/width_bottom_line"
-                android:color="@color/green_200" />
+                android:color="@color/yellow_600" />
             <gradient
-                android:endColor="@color/green_200"
+                android:endColor="@color/yellow_600"
                 android:gradientRadius="@dimen/gradient_radius_900"
                 android:type="radial"
                 />

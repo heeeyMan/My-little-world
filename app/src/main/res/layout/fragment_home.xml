@@ -36,7 +36,7 @@
         android:layout_height="@dimen/size_user_icon"
         android:layout_marginTop="@dimen/main_vertical_margin"
         android:layout_marginStart="@dimen/main_vertical_margin"
-        app:shapeAppearance="@style/IconProfile"
+        app:shapeAppearance="@style/IconProfileStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/person_status"
         app:strokeColor="@color/yellow_300"
@@ -76,7 +76,7 @@
         android:fontFamily="@font/nunito_extra_bold"
         android:textSize="@dimen/text_size_32"
         android:gravity="center"
-        android:textColor="@color/green_200"
+        android:textColor="@color/yellow_600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_photo" />
@@ -102,8 +102,7 @@
         android:contentDescription="@string/panda_mind_description"
         app:layout_constraintBottom_toBottomOf="@id/more_information"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

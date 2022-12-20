@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/cloud_mind"
         android:layout_marginTop="@dimen/padding_162"
-        android:layout_marginBottom="@dimen/padding_100"
+        android:layout_marginBottom="@dimen/padding_130"
         android:layout_marginStart="@dimen/padding_85"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/layoutTextPassword"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/presentation_app_name"
-        android:textColor="@color/blue_700"
+        android:textColor="@color/yellow_300"
         android:textSize="@dimen/text_size_32"
         android:textStyle="bold"
         android:fontFamily="@font/nunito_extra_bold"
@@ -77,6 +77,7 @@
         android:id="@+id/layoutTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bear"
@@ -103,15 +104,13 @@
         android:background="@drawable/button_state"
         android:gravity="center"
         android:text="@string/go"
-        android:textColor="@color/white"
+        android:textColor="@color/yellow_600"
         android:textSize="@dimen/text_size_32"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/padding_6"
-        android:layout_marginBottom="@dimen/padding_100"
+        android:layout_marginTop="@dimen/padding_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutTextPassword"
-        />
+        app:layout_constraintTop_toBottomOf="@id/layoutTextPassword" />
 
     <ImageView
         android:id="@+id/thinkingPerson"
@@ -119,6 +118,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/thinking_person_description"
         android:src="@drawable/thinking_person"
+        android:layout_marginTop="@dimen/padding_16"
+        app:layout_constraintBottom_toTopOf="@+id/help_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_button" />
@@ -130,9 +131,10 @@
         android:text="@string/help_text"
         android:textColor="@color/blue_700"
         android:textSize="@dimen/text_size_14"
+        android:layout_marginBottom="@dimen/main_vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/thinkingPerson" />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

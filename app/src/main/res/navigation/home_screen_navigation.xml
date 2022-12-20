@@ -19,7 +19,5 @@
         android:id="@+id/favorite_anime"
         android:name="com.alexvasin.littleworld.general.ui.favorite.FavoriteAnimeFragment"
         android:label="@string/favorite"
-        tools:layout="@layout/fragment_favorite_anime">
-    </fragment>
-
+        tools:layout="@layout/fragment_favorite_anime"/>
 </navigation>

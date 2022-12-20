@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="IconProfile">
+    <style name="IconProfileStyle">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_user_icon</item>
     </style>
@@ -9,6 +9,16 @@
     <style name="Widget.Theme.GeneralStyle.ButtonBar.Fullscreen" parent="">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="searchStyle" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="queryHint">@string/search</item>
+        <item name="fontFamily">@font/nunito_medium</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/yellow_600</item>
+        <item name="android:textAlignment">center</item>
+        <item name="searchIcon">@null</item>
+        <item name="closeIcon">@null</item>
     </style>
 
 </resources>

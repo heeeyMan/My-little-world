@@ -12,7 +12,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearance="@style/IconProfile"
+        app:shapeAppearance="@style/IconProfileStyle"
         app:strokeColor="@color/yellow_300"
         app:strokeWidth="@dimen/width_user_icon" />
 

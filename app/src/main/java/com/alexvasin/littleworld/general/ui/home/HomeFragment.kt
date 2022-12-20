@@ -2,7 +2,6 @@ package com.alexvasin.littleworld.general.ui.home
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,7 +33,7 @@ class HomeFragment : Fragment(), OnHomeClickListener {
         binding.editPhoto.text = getString(R.string.edit_photo)
         binding.favoriteAnime.text = getString(R.string.favorite)
         binding.favoriteAnime.setOnClickListener {
-
+            homeViewModel?.clickOnFavorite()
         }
 
         _adapter = PersonDataAdapter()
