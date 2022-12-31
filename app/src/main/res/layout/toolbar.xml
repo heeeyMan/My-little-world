@@ -8,6 +8,5 @@
     android:background="@drawable/toolbar"
     android:theme="@style/Toolbar"
     android:animateLayoutChanges="false"
-    app:titleTextAppearance="@style/titleToolbar"
-    app:navigationIcon="@drawable/arrow_back">
+    app:titleTextAppearance="@style/titleToolbar">
 </androidx.appcompat.widget.Toolbar>

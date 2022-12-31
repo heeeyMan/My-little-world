@@ -1,9 +1,7 @@
 package com.alexvasin.littleworld.general.ui.activities
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -24,11 +22,14 @@ class MainActivity : AppCompatActivity() {
         val toolbar = binding.mainToolbar.toolbar
         val navView: BottomNavigationView = binding.bottomNavigationView
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+            supportFragmentManager.findFragmentById(binding.navHostFragmentActivityMain.id) as NavHostFragment
         navController = navHostFragment.navController
         setSupportActionBar(toolbar)
-
-        val appBarConfiguration = AppBarConfiguration.Builder(navController.graph).build()
+        val appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.other_fragment,
+            R.id.anime_fragment,
+            R.id.home_fragment
+        ))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         toolbar.setupWithNavController(navController, appBarConfiguration)
@@ -37,5 +38,4 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()
     }
-
 }

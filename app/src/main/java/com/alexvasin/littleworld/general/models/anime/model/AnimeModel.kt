@@ -11,7 +11,7 @@ class AnimeModel(): IAnimeModel {
     private var fullEmployeeList: ArrayList<AnimeCardData> = arrayListOf()
     private var employeeListFiltered: MutableList<AnimeCardData> = mutableListOf()
 
-    override fun getAnimeData(): ArrayList<AnimeCardData> {
+    override fun getAnimeData(): Map<Char, ArrayList<AnimeCardData>> {
         return AnimeService.getAnimeData()
     }
     override fun searchViewTextChanged(searchQuery: String?): Pair<ArrayList<AnimeCardData>, SearchBarTextState> {

@@ -6,6 +6,6 @@ import com.alexvasin.littleworld.general.datamodels.SearchBarTextState
 interface IAnimeView {
     fun showNotFoundError(errorState: SearchBarTextState)
     fun handleChangeTextSearchView(query: String?)
-    fun showAnimeList(employeeDataModels: ArrayList<AnimeCardData>)
+    fun showAnimeList(employeeDataModels: Map<Char, ArrayList<AnimeCardData>>)
     fun heartClick(like: Boolean, position: Int)
 }

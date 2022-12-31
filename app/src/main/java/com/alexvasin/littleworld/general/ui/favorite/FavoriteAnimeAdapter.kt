@@ -47,7 +47,7 @@ class FavoriteAnimeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             binding.heart.visibility = View.INVISIBLE
             binding.icon.setImageResource(moreItem.icon)
             binding.title.text = moreItem.title
-            binding.subTitle.text = moreItem.subTitle
+            binding.subTitle.text = moreItem.rating
             binding.nameSubTitle.text = context.getString(R.string.rating)
             binding.nameSubTitle.setOnClickListener {
                 mItemClickListener?.onItemClick(position)

@@ -45,7 +45,7 @@ class AnimeCardDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(moreItem: AnimeCardData, position: Int) {
             binding.icon.setImageResource(moreItem.icon)
             binding.title.text = moreItem.title
-            binding.subTitle.text = moreItem.subTitle
+            binding.subTitle.text = moreItem.rating
             binding.nameSubTitle.text = context.getString(R.string.rating)
             if (moreItem.isFavorite) {
                 binding.heart.setImageResource(R.drawable.heart_color)

@@ -11,14 +11,14 @@ class AnimeListViewModel(
     private val model: IAnimeModel,
     private val router: IAnimeRouter
 ) : ViewModel(), IAnimeView {
-    var animeData = MutableLiveData<ArrayList<AnimeCardData>>()
+    var animeData = MutableLiveData<Map<Char, ArrayList<AnimeCardData>>>()
     val searchBarTextState: MutableLiveData<SearchBarTextState> = MutableLiveData()
 
     init {
         animeDataInit(model.getAnimeData())
     }
 
-    private fun animeDataInit(data: ArrayList<AnimeCardData>) {
+    private fun animeDataInit(data: Map<Char, ArrayList<AnimeCardData>>) {
         animeData.postValue(data)
     }
 
@@ -30,7 +30,7 @@ class AnimeListViewModel(
         searchBarTextState.postValue(SearchBarTextState.SEARCH_BAR_TEXT_EMPTY)
     }
 
-    override fun showAnimeList(employeeDataModels: ArrayList<AnimeCardData>) {
+    override fun showAnimeList(employeeDataModels: Map<Char, ArrayList<AnimeCardData>>) {
         animeData.postValue(employeeDataModels)
     }
 

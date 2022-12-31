@@ -20,6 +20,7 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
     private var animeAdapter: AnimeCardDataAdapter? = null
     private var viewModel: AnimeListViewModel? = null
     private var searchViewItem: MenuItem? = null
+    private var menuHost: MenuHost? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,10 +34,9 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
         recyclerView.layoutManager = LinearLayoutManager(context)
         animeAdapter?.mItemClickListener = this
         recyclerView.adapter = animeAdapter
+        menuHost = requireActivity()
 
-        val menuHost: MenuHost = requireActivity()
-
-        menuHost.addMenuProvider(object : MenuProvider {
+        menuHost?.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.search_view, menu)
                 searchViewItem = menu.findItem(R.id.action_search)
@@ -49,18 +49,15 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
 
                     override fun onMenuItemActionExpand(menu: MenuItem): Boolean {
                         viewModel?.searchViewExpanded()
-                        Toast.makeText(
-                            requireActivity(),
-                            "onMenuItemActionExpand",
-                            Toast.LENGTH_LONG
-                        ).show()
-                        Log.d("search", "onMenuItemActionExpand")
+                        binding.animeList.visibility = View.GONE
+                        binding.sortButton.visibility = View.GONE
                         return true
                     }
 
                     override fun onMenuItemActionCollapse(menu: MenuItem): Boolean {
-                        Log.d("search", "onMenuItemActionCollapse")
                         viewModel?.searchViewCollapsed()
+                        binding.sortButton.visibility = View.VISIBLE
+                        binding.animeList.visibility = View.VISIBLE
                         return true
                     }
                 })
@@ -68,17 +65,11 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
                 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
                     override fun onQueryTextSubmit(query: String?): Boolean {
-                        Log.d("search", "onQueryTextSubmit")
                         return false
                     }
 
                     override fun onQueryTextChange(query: String?): Boolean {
                         viewModel?.handleChangeTextSearchView(query)
-                        Toast.makeText(
-                            requireActivity(),
-                            "onQueryTextChange",
-                            Toast.LENGTH_LONG
-                        ).show()
                         Log.d("search", "onQueryTextChange")
                         return false
                     }
@@ -111,6 +102,7 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
         _binding = null
         viewModel = null
         animeAdapter = null
+        menuHost = null
     }
 
     override fun onHeartClick(like: Boolean, position: Int) {
