@@ -13,7 +13,7 @@ object AnimeService : IAnimeService {
             AnimeCardData(
                 R.drawable.owner_person,
                 "Start",
-                "7.8",
+                "7.10",
                 false
             ),
             AnimeCardData(
