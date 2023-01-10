@@ -1,196 +1,131 @@
 package com.alexvasin.littleworld.general.services.anime
 
 import com.alexvasin.littleworld.R
+import com.alexvasin.littleworld.general.datamodels.AllAnimeData
 import com.alexvasin.littleworld.general.datamodels.AnimeCardData
 
 object AnimeService : IAnimeService {
-    private var animeData = arrayListOf<AnimeCardData>()
-    private var animeList = arrayListOf<AnimeCardData>()
-    private var favoriteAnime = listOf<AnimeCardData>()
-    private var sortAnimeList = mapOf<Char, ArrayList<AnimeCardData>>()
+    private var allAnimeData = arrayListOf<AllAnimeData>()
+    private var cardAnimeList = listOf<AnimeCardData>()
 
     init {
-        animeData = arrayListOf(
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Start",
-                "7.8",
-                false
+        allAnimeData = arrayListOf(
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Start",
+                rating = "8.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
             ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Bala",
-                "9.8",
-                true
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Afmk",
+                rating = "1.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
             ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Gaka",
-                "3.8",
-                false
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Dert",
+                rating = "9.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
             ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Derad",
-                "5.8",
-                false
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Ken",
+                rating = "6.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
             ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Alfa",
-                "8.8",
-                true
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Yes",
+                rating = "3.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
             ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Hint",
-                "7.9",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Derad",
-                "5.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Alfa",
-                "8.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Hint",
-                "7.9",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Hint",
-                "7.9",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Sart",
-                "7.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Sbala",
-                "9.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Scaka",
-                "3.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Snrad",
-                "5.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Scfa",
-                "8.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Derad",
-                "5.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Alfa",
-                "8.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "END",
-                "7.9",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Aastart",
-                "7.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Abala",
-                "9.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Acfa",
-                "8.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Azint",
-                "7.9",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Zart",
-                "7.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Zbabala",
-                "9.8",
-                true
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Zend",
-                "3.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Cart",
-                "7.8",
-                false
-            ),
-            AnimeCardData(
-                R.drawable.owner_person,
-                "Cbala",
-                "9.8",
-                true
-            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "End",
+                rating = "9.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            )
         )
-        for(item in animeData) {
-            sortAnimeList[item.title[0]]?.add(item)
+        updateAnimeCard()
+    }
+
+    override fun getAnimeListSortedAlphabet(): Map<Char, ArrayList<AnimeCardData>> {
+        val animeListSortedAlphabet = mapOf<Char, ArrayList<AnimeCardData>>()
+        for (item in cardAnimeList) {
+            animeListSortedAlphabet[item.title[0]]?.add(item)
         }
-        animeList = animeData
-        favoriteAnime = animeList.filter { it.isFavorite }
+        return animeListSortedAlphabet
     }
 
-    override fun getAnimeData(): Map<Char, ArrayList<AnimeCardData>> {
-        return sortAnimeList
+    override fun getAnimeListSortedRating(): Map<Float, ArrayList<AnimeCardData>> {
+        val animeListSortedRating = mapOf<Float, ArrayList<AnimeCardData>>()
+        for (item in cardAnimeList) {
+            animeListSortedRating[item.rating.toFloat()]?.add(item)
+        }
+        return animeListSortedRating
     }
 
-    override fun getFavoriteData(): List<AnimeCardData> {
-        return favoriteAnime
+    override fun getFavoriteAnimeList(): List<AnimeCardData> {
+        return cardAnimeList.filter { it.isFavorite }
     }
 
-    override fun changeLikeAnimeList(like: Boolean, position: Int) {
-        animeList[position].isFavorite = like
-        favoriteAnime = animeList.filter { it.isFavorite }
+    override fun getAnimeList(): List<AnimeCardData> {
+        return cardAnimeList
     }
+
+    override fun changeFavoriteStatusAnimeCard(isFavorite: Boolean, position: Int) {
+        allAnimeData[position].isFavorite = isFavorite
+        updateAnimeCard()
+    }
+
+    override fun changeViewedStatusAnimeCard(isViewed: Boolean, position: Int) {
+        allAnimeData[position].isViewed = isViewed
+        updateAnimeCard()
+    }
+
+    override fun getMoreInformationAboutCard(selectedCard: AnimeCardData): AllAnimeData? {
+        return allAnimeData.find {
+            (it.title == selectedCard.title) &&
+            (it.rating == selectedCard.rating) &&
+            (it.isFavorite == selectedCard.isFavorite)
+        }
+    }
+
+    private fun updateAnimeCard() {
+        cardAnimeList = cardAnimeList.map {
+            AnimeCardData(it.icon, it.title, it.rating, it.isFavorite)
+        }
+    }
+
 }

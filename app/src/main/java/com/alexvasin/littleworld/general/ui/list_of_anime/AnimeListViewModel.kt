@@ -11,15 +11,17 @@ class AnimeListViewModel(
     private val model: IAnimeModel,
     private val router: IAnimeRouter
 ) : ViewModel(), IAnimeView {
-    var animeData = MutableLiveData<Map<Char, ArrayList<AnimeCardData>>>()
+    var animeListSortedAlphabet = MutableLiveData<Map<Char, ArrayList<AnimeCardData>>>()
+    var animeListSortedRating = MutableLiveData<Map<Float, ArrayList<AnimeCardData>>>()
+    var animeList = MutableLiveData<List<AnimeCardData>>()
     val searchBarTextState: MutableLiveData<SearchBarTextState> = MutableLiveData()
 
     init {
-        animeDataInit(model.getAnimeData())
+        animeDataInit(model.getAnimeList())
     }
 
-    private fun animeDataInit(data: Map<Char, ArrayList<AnimeCardData>>) {
-        animeData.postValue(data)
+    private fun animeDataInit(data: List<AnimeCardData>) {
+        animeList.postValue(data)
     }
 
     fun searchViewCollapsed() {
@@ -30,13 +32,13 @@ class AnimeListViewModel(
         searchBarTextState.postValue(SearchBarTextState.SEARCH_BAR_TEXT_EMPTY)
     }
 
-    override fun showAnimeList(employeeDataModels: Map<Char, ArrayList<AnimeCardData>>) {
-        animeData.postValue(employeeDataModels)
+    override fun showAnimeList(data: List<AnimeCardData>) {
+        animeList.postValue(data)
     }
 
     override fun heartClick(like: Boolean, position: Int) {
-        model.changeStateHeart(like, position)
-        animeDataInit(model.getAnimeData())
+        model.changeFavoriteState(like, position)
+        animeDataInit(model.getAnimeList())
     }
 
     override fun showNotFoundError(errorState: SearchBarTextState) {

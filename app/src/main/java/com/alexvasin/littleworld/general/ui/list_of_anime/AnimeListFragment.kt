@@ -88,7 +88,7 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel?.apply {
-            animeData.observe(viewLifecycleOwner) {
+            animeList.observe(viewLifecycleOwner) {
                 animeAdapter?.setMoreItems(it)
             }
             searchBarTextState.observe(viewLifecycleOwner) {
