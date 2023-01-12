@@ -45,7 +45,7 @@ class AnimeCardDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(moreItem: AnimeCardData, position: Int) {
             binding.icon.setImageResource(moreItem.icon)
             binding.title.text = moreItem.title
-            binding.subTitle.text = moreItem.subTitle
+            binding.subTitle.text = moreItem.rating
             binding.nameSubTitle.text = context.getString(R.string.rating)
             if (moreItem.isFavorite) {
                 binding.heart.setImageResource(R.drawable.heart_color)
@@ -59,9 +59,13 @@ class AnimeCardDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setMoreItems(items: List<AnimeCardData>) {
+    fun updateList(items: List<AnimeCardData>) {
         personDataList.clear()
         personDataList.addAll(items)
         notifyDataSetChanged()
+    }
+    fun updateElement(item: AnimeCardData, position: Int) {
+        personDataList[position] = item
+        notifyItemChanged(position)
     }
 }

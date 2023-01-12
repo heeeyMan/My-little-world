@@ -24,7 +24,7 @@
                 android:layout_height="@dimen/height_head"
                 android:layout_weight="@integer/weight_1"
                 android:gravity="center_vertical"
-                android:textColor="@color/black"
+                android:textColor="@color/yellow_600"
                 android:textSize="@dimen/text_size_24"
                 android:fontFamily="@font/nunito_extra_bold"
                 android:textStyle="bold" />

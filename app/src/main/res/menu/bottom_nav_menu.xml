@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/home_screen_navigation"
         android:icon="@drawable/icn_home"
         android:title="@string/home" />
 
     <item
-        android:id="@+id/navigation_anime_list"
+        android:id="@+id/anime_list_navigation"
         android:icon="@drawable/icn_search"
         android:title="@string/list_of_anime" />
 
     <item
-        android:id="@+id/navigation_other"
+        android:id="@+id/other_navigation"
         android:icon="@drawable/other"
         android:title="@string/other" />
-    <item
-        android:id="@+id/navigation_favorite_anime"
-        android:icon="@drawable/games"
-        android:title="@string/games" />
-
 </menu>

@@ -13,6 +13,12 @@
     <string name="enter_something">Please, enter something … or not … \njust press enter button ;) </string>
     <string name="help_text">Don\'t understand what to do?</string>
 
+    <!-- Anime screen -->
+    <string name="sort">Sort by</string>
+    <string name="rating">Rating:</string>
+    <string name="not_found">Anime with the name \n not found :(</string>
+    <string name="empty_request">You haven\'t entered the request yet </string>
+
     <!-- Home screen -->
     <string name="first_name">First name:</string>
     <string name="last_name">Last name:</string>
@@ -35,11 +41,6 @@
     <string name="panda_text">Have a nice day!\nSmile at me… please :)</string>
     <string name="edit_photo">Edit my photo</string>
 
-    <!-- Anime screen  -->
-
-    <string name="start_search_header">Start the search</string>
-    <string name="start_search_message">You haven\'t entered the full name of the employee \nyou want to find yet</string>
-
     <!-- Auth screen description -->
     <string name="sun_description">The sun is depicted here, just image</string>
     <string name="cloud_description">The cloud is depicted here, just image</string>
@@ -50,8 +51,5 @@
     <string name="arrow_down">The arrow down is depicted here, just image</string>
     <string name="heart_empty">The heart empty is depicted here, just image</string>
     <string name="heart_color">The heart color is depicted here, just image</string>
-    <string name="sort">Sort by</string>
-    <string name="rating">Rating:</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

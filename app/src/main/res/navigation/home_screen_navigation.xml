@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_screen_navigation"
+    app:startDestination="@id/home_screen">
+
+    <fragment
+        android:id="@+id/home_screen"
+        android:name="com.alexvasin.littleworld.general.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_favorite_anime"
+            app:destination="@id/favorite_anime" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favorite_anime"
+        android:name="com.alexvasin.littleworld.general.ui.favorite.FavoriteAnimeFragment"
+        android:label="@string/favorite"
+        tools:layout="@layout/fragment_favorite_anime"/>
+</navigation>

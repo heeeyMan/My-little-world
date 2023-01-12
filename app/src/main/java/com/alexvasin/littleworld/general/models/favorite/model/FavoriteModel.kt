@@ -6,6 +6,6 @@ import com.alexvasin.littleworld.general.services.anime.AnimeService
 class FavoriteModel(): IFavoriteModel {
 
     override fun getFavoriteAnimeData(): List<AnimeCardData> {
-        return AnimeService.getFavoriteData()
+        return AnimeService.getFavoriteAnimeList()
     }
 }

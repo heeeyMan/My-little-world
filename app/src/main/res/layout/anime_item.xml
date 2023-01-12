@@ -12,7 +12,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearance="@style/IconProfile"
+        app:shapeAppearance="@style/IconProfileStyle"
         app:strokeColor="@color/yellow_300"
         app:strokeWidth="@dimen/width_user_icon" />
 
@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_10"
+        android:textColor="@color/yellow_600"
         android:fontFamily="@font/nunito_extra_bold"
         android:textSize="@dimen/text_size_24"
         android:textStyle="bold"
@@ -55,8 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/main_horizontal_margin"
         android:contentDescription="@string/heart_empty" />
 
