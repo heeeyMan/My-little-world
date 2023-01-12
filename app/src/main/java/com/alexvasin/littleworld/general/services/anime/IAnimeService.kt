@@ -8,7 +8,7 @@ interface IAnimeService {
     fun getAnimeListSortedRating(): Map<Float, ArrayList<AnimeCardData>>
     fun getFavoriteAnimeList(): List<AnimeCardData>
     fun getAnimeList(): List<AnimeCardData>
+    fun getAnimeItem(position: Int): AnimeCardData
     fun changeFavoriteStatusAnimeCard(isFavorite: Boolean, position: Int)
-    fun changeViewedStatusAnimeCard(isViewed: Boolean, position: Int)
     fun getMoreInformationAboutCard(selectedCard: AnimeCardData): AllAnimeData?
 }

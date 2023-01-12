@@ -1,12 +1,11 @@
 package com.alexvasin.littleworld.general.ui.list_of_anime
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexvasin.littleworld.R
@@ -21,6 +20,7 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
     private var viewModel: AnimeListViewModel? = null
     private var searchViewItem: MenuItem? = null
     private var menuHost: MenuHost? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,23 +41,18 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
                 menuInflater.inflate(R.menu.search_view, menu)
                 searchViewItem = menu.findItem(R.id.action_search)
                 val searchView = searchViewItem?.actionView as SearchView
-                searchView.queryHint = "Search"
-                searchView.isIconified = false
+                searchView.queryHint = getString(R.string.search)
 
                 searchView.onActionViewExpanded()
                 searchViewItem?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
 
                     override fun onMenuItemActionExpand(menu: MenuItem): Boolean {
                         viewModel?.searchViewExpanded()
-                        binding.animeList.visibility = View.GONE
-                        binding.sortButton.visibility = View.GONE
                         return true
                     }
 
                     override fun onMenuItemActionCollapse(menu: MenuItem): Boolean {
                         viewModel?.searchViewCollapsed()
-                        binding.sortButton.visibility = View.VISIBLE
-                        binding.animeList.visibility = View.VISIBLE
                         return true
                     }
                 })
@@ -70,14 +65,12 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
 
                     override fun onQueryTextChange(query: String?): Boolean {
                         viewModel?.handleChangeTextSearchView(query)
-                        Log.d("search", "onQueryTextChange")
                         return false
                     }
                 })
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                Log.d("search", "onMenuItemSelected")
                 return false
             }
         }, viewLifecycleOwner)
@@ -89,10 +82,21 @@ class AnimeListFragment : Fragment(), OnHeartClickListener {
         super.onViewCreated(view, savedInstanceState)
         viewModel?.apply {
             animeList.observe(viewLifecycleOwner) {
-                animeAdapter?.setMoreItems(it)
+                if (it != null) {
+                    animeAdapter?.updateList(it)
+                }
+            }
+            animeItemUpdate.observe(viewLifecycleOwner) {
+                animeAdapter?.updateElement(it.first, it.second)
             }
             searchBarTextState.observe(viewLifecycleOwner) {
-
+                binding.animeList.isVisible = it.isVisible()
+                binding.searchText.text = it.getMessageId()?.let { textId -> getString(textId) }
+            }
+            searchBarState.observe(viewLifecycleOwner) {
+                binding.animeList.isVisible = it.isVisible()
+                binding.sortButton.isVisible = it.isVisible()
+                binding.searchText.text = it.getMessageId()?.let { textId -> getString(textId) }
             }
         }
     }

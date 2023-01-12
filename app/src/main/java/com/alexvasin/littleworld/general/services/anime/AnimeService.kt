@@ -5,11 +5,11 @@ import com.alexvasin.littleworld.general.datamodels.AllAnimeData
 import com.alexvasin.littleworld.general.datamodels.AnimeCardData
 
 object AnimeService : IAnimeService {
-    private var allAnimeData = arrayListOf<AllAnimeData>()
-    private var cardAnimeList = listOf<AnimeCardData>()
+    private var allAnimeData = mutableListOf<AllAnimeData>()
+    private var cardAnimeList = mutableListOf<AnimeCardData>()
 
     init {
-        allAnimeData = arrayListOf(
+        allAnimeData = mutableListOf(
             AllAnimeData(
                 icon = R.drawable.owner_person,
                 title = "Start",
@@ -67,9 +67,163 @@ object AnimeService : IAnimeService {
             ),
             AllAnimeData(
                 icon = R.drawable.owner_person,
-                title = "End",
+                title = "Aadfmk",
+                rating = "1.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Drerert",
                 rating = "9.8",
                 isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Kejfjfn",
+                rating = "9.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Poooes",
+                rating = "12.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Derh",
+                rating = "2.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Rebf",
+                rating = "12.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Kontr",
+                rating = "10.0",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Forn",
+                rating = "7.45",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Keern",
+                rating = "8.18",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Ter",
+                rating = "4.18",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Vnvjn",
+                rating = "8.48",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Kmskln",
+                rating = "1.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Dabf",
+                rating = "3.58",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "Habfhbjfb",
+                rating = "11.8",
+                isFavorite = false,
+                isViewed = false,
+                description = "This anime is veeery coool! Please, bro, you must watch this! " +
+                        "I would like to clear my memory, to watch this masterpiece again",
+                categories = arrayListOf("Comedy, Advеnture, Etty, Horror"),
+                link = "https://animego.org/anime"
+            ),
+            AllAnimeData(
+                icon = R.drawable.owner_person,
+                title = "End",
+                rating = "9.8",
+                isFavorite = true,
                 isViewed = false,
                 description = "This anime is veeery coool! Please, bro, you must watch this! " +
                         "I would like to clear my memory, to watch this masterpiece again",
@@ -104,27 +258,27 @@ object AnimeService : IAnimeService {
         return cardAnimeList
     }
 
-    override fun changeFavoriteStatusAnimeCard(isFavorite: Boolean, position: Int) {
-        allAnimeData[position].isFavorite = isFavorite
-        updateAnimeCard()
+    override fun getAnimeItem(position: Int): AnimeCardData {
+        return cardAnimeList[position]
     }
 
-    override fun changeViewedStatusAnimeCard(isViewed: Boolean, position: Int) {
-        allAnimeData[position].isViewed = isViewed
-        updateAnimeCard()
+    override fun changeFavoriteStatusAnimeCard(isFavorite: Boolean, position: Int) {
+        allAnimeData[position].isFavorite = isFavorite
+        cardAnimeList[position].isFavorite = isFavorite
     }
 
     override fun getMoreInformationAboutCard(selectedCard: AnimeCardData): AllAnimeData? {
         return allAnimeData.find {
             (it.title == selectedCard.title) &&
-            (it.rating == selectedCard.rating) &&
-            (it.isFavorite == selectedCard.isFavorite)
+                    (it.rating == selectedCard.rating) &&
+                    (it.isFavorite == selectedCard.isFavorite)
         }
     }
 
     private fun updateAnimeCard() {
-        cardAnimeList = cardAnimeList.map {
-            AnimeCardData(it.icon, it.title, it.rating, it.isFavorite)
+        cardAnimeList.clear()
+        for (item in allAnimeData) {
+            cardAnimeList.add(AnimeCardData(item.icon, item.title, item.rating, item.isFavorite))
         }
     }
 

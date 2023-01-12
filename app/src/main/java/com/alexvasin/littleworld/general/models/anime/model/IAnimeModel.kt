@@ -8,6 +8,6 @@ interface IAnimeModel {
     fun getAnimeListSortedAlphabet(): Map<Char, ArrayList<AnimeCardData>>
     fun getAnimeListSortedRating(): Map<Float, ArrayList<AnimeCardData>>
     fun getAnimeList(): List<AnimeCardData>
-    fun changeFavoriteState(like: Boolean, position: Int)
-    fun changeViewedState(like: Boolean, position: Int)
+    fun getAnimeItem(position: Int): AnimeCardData
+    fun changeFavoriteState(isFavorite: Boolean, position: Int)
 }

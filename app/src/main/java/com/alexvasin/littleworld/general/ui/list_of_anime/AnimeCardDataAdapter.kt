@@ -59,9 +59,13 @@ class AnimeCardDataAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setMoreItems(items: List<AnimeCardData>) {
+    fun updateList(items: List<AnimeCardData>) {
         personDataList.clear()
         personDataList.addAll(items)
         notifyDataSetChanged()
+    }
+    fun updateElement(item: AnimeCardData, position: Int) {
+        personDataList[position] = item
+        notifyItemChanged(position)
     }
 }

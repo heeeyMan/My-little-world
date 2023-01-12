@@ -1,11 +1,11 @@
 package com.alexvasin.littleworld.general.ui.list_of_anime
 
-import com.alexvasin.littleworld.general.datamodels.AnimeCardData
+import com.alexvasin.littleworld.general.datamodels.SearchBarState
 import com.alexvasin.littleworld.general.datamodels.SearchBarTextState
 
 interface IAnimeView {
-    fun showNotFoundError(errorState: SearchBarTextState)
+    fun showSearchBarTextState(state: SearchBarTextState)
+    fun showSearchBarState(state: SearchBarState)
     fun handleChangeTextSearchView(query: String?)
-    fun showAnimeList(data: List<AnimeCardData>)
-    fun heartClick(like: Boolean, position: Int)
+    fun heartClick(isFavorite: Boolean, position: Int)
 }
